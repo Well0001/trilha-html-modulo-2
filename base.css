@@ -1,7 +1,10 @@
 html, body {
     margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
+    margin-top: 15px;
     background-color: #f1f1f1;
     display: flex;
     justify-content: center;
@@ -11,7 +14,6 @@ body {
     width: 1200px;
     display: flex;
     margin: 0 auto;
-    background-color: aquamarine;
 }
 .main {
     display: flex;
@@ -19,20 +21,86 @@ body {
     width: 85%;
 }
 .menu {
-    width: 15%;
-    background-color: aqua;
-    padding: 10px 20px 0px;
+    margin-top: 30px;
+    width: 20%;
+    background-color: rgb(99, 99, 99);
+    padding: 10px 00px 0px;
+    margin-right: 120px;
 }
 .header {
-    background-color: rgb(5, 108, 108);
+    background-color: rgb(197, 197, 197);
     min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.41);
+   box-shadow: 0px 3px 11px 0px rgba(0,0,0,0.41);
 }
 .content {
+    margin-top: 10px;
     background-color: white;
     min-height: 300px;
-    padding: 20px;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 .footer {
-    background-color: rgb(99, 56, 240);
+    background-color: rgb(211, 211, 211);
     min-height: 150px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.header > img {
+    width: 180px;
+    filter: brightness(1.05);
+}
+
+.header >h2 {
+    font-size: 14px;
+    color: rgb(59, 59, 59);
+}
+
+.menu ul li {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.menu ul li:hover a {
+    font-weight: bold;
+    font-size: 1.08rem;
+}
+
+.holder {
+    display: flex;
+}
+.imagem {
+  width: 150px;
+  margin: 5px;
+  position: relative;
+  text-align: center;
+}
+.imagem::after {
+  content: attr(data-title);
+  position: absolute;
+  width: 80%;
+  bottom: -20px;
+  left: 0;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
